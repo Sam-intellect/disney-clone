@@ -47,6 +47,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   padding: 0 36px;
+  justify-content: space-between;
 `;
 
 const Logo = styled.img`
@@ -55,10 +56,12 @@ const Logo = styled.img`
 
 const NavMenu = styled.div`
   display: flex;
+
   a {
     display: flex;
     align-items: center;
     padding: 0 12px;
+    cursor: pointer;
 
     img {
       height: 20px;
@@ -67,8 +70,25 @@ const NavMenu = styled.div`
     span {
       font-size: 13px;
       letter-spacing: 1.42px;
+      position: relative;
+
+      &:after {
+        content: '';
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: 0
+        right: 0;
+        bottom: -6px;
+      }
     }
   }
 `;
 
-const Userimage = styled.img``;
+const Userimage = styled.div`
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+`;
